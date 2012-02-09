@@ -1,3 +1,14 @@
-# War Sample Project
+# Tomcat Maven Plugin Sample Project
 
-Basic maven war project. Good to use as a starting point for containerless application experiments.
+Webapp project that uses the tomcat maven plugin executable war/jar functionality to build to an executable jar file. The project contains an index.jsp that uses a taglib and a simple servlet.
+
+## Building
+
+To build the project run:
+
+    $ mvn package
+
+## Execute
+
+    $ java -jar target/warSample-1.0-SNAPSHOT-war-exec.jar --resetExtract 
+
