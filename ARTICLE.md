@@ -1,10 +1,11 @@
 # Using the Maven Tomcat plugin to build an executable jar
 
+Follow each step to build an app from scratch, or skip to the end get the source for this article. You can also use almost any existing Maven webapp project.
+
 ## Prerequisites
 
 * Basic Java knowledge, including an installed version of the JVM and Maven.
 * Basic Git knowledge, including an installed version of Git.
-* A Java web application. If you don't have one follow the first step to create an example. Otherwise skip that step.
 
 ## The Tomcat Maven Plugin
 
@@ -89,11 +90,14 @@ You declare how you want your application executed in `Procfile` in the project 
     :::term
     web:    java $JAVA_OPTS -jar target/helloworld-1.0-SNAPSHOT-war-exec.jar --httpPort $PORT
 
+<div class="callout" markdown="1">You won't need -resetExtract when running on Heroku because the temporary directory will be cleared automatically</div>
+
 ## Deploy to Heroku
 
 Commit your changes to Git:
 
     :::term
+    $ git init
     $ git add .
     $ git commit -m "Ready to deploy"
 
@@ -158,3 +162,9 @@ Congratulations! Your web app should now be up and running on Heroku. Open it in
 
     :::term  
     $ heroku open
+
+## Clone the Source
+
+If you want to skip the creation steps you can clone the finished sample:
+
+    $ git clone git@github.com:heroku/devcenter-tomcat-maven-plugin.git
