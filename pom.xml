@@ -8,20 +8,6 @@
   <packaging>war</packaging>
   <url>http://maven.apache.org</url>
 
-  <pluginRepositories>
-    <pluginRepository>
-      <id>apache.snapshots</id>
-      <name>Apache Snapshots</name>
-      <url>http://repository.apache.org/content/groups/snapshots-group/</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>
-
   <dependencies>
   	<dependency>
   		<groupId>javax.servlet</groupId>
@@ -41,7 +27,7 @@
       <plugin>
         <groupId>org.apache.tomcat.maven</groupId>
         <artifactId>tomcat7-maven-plugin</artifactId>
-        <version>2.0-SNAPSHOT</version>
+        <version>2.0-beta-1</version>
         <executions>
           <execution>
             <id>tomcat-run</id>
@@ -50,7 +36,7 @@
             </goals>
             <phase>package</phase>
             <configuration>
-              <path>/test</path>
+              <path>/</path>
             </configuration>
           </execution>
         </executions>
