@@ -38,6 +38,8 @@ The webapp will be loaded into an embedded Tomcat container and launched.
 ## Add the Tomcat Maven plugin to your project
 
 Add the plugin to your pom and configure it to build an executable jar file during the package phase by using the pom snippet below:
+
+    :::xml
     <build>
       ...
       <plugins>
